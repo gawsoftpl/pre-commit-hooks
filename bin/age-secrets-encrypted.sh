@@ -2,3 +2,5 @@
 
 echo $1
 echo $@
+
+exit 1
