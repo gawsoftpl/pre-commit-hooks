@@ -1,0 +1,5 @@
+repos:
+- repo: https://github.com/gawsoftpl/pre-commit-hooks
+  rev: main
+  hooks:
+  - id: age-secrets-encrypted

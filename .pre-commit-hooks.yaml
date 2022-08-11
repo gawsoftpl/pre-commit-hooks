@@ -1,0 +1,11 @@
+- id: age-secrets-encrypted
+  name: Files encrypted with age
+  description: Check that files in argument directory are encrypted with age
+  require_serial: true
+  entry: bin/age-secrets-encrypted.sh
+  language: script
+  always_run: true
+  args:
+  - path
+  #files: *
+
