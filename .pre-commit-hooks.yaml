@@ -15,8 +15,6 @@
   entry: bin/kubernetes-secrets.sh
   language: script
   always_run: true
-  args:
-  - path
   #files: *
 
 

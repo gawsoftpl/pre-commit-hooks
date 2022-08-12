@@ -9,7 +9,7 @@ then
 fi
 
 was_no_encrypted=0
-for file in $(find $dir -type f );
+for file in $@;
 do
     was_encrypted=`cat ${file} | grep 'kind: Secret'`
     was_encrypted2=`cat ${file} | grep 'kind: secret'`
