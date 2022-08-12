@@ -1,13 +1,5 @@
 #!/usr/bin/env bash
 
-dir=$1
-
-if [ ! -d $dir ];
-then
-    echo "$dir not exists"
-    exit 1
-fi
-
 was_no_encrypted=0
 for file in "${@}";
 do
