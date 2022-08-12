@@ -3,3 +3,4 @@ repos:
   rev: main
   hooks:
   - id: age-secrets-encrypted
+  - id: kubernetes-secrets
