@@ -14,9 +14,9 @@ do
     was_encrypted=`cat ${file} | grep 'kind: Secret'`
     was_encrypted2=`cat ${file} | grep 'kind: secret'`
 
-    if [ ${#was_encrypted} -eq 0 ] || [ ${#was_encrypted2} -eq 0 ] ;
+    if [ ${#was_encrypted} -gt 0 ] || [ ${#was_encrypted2} -gt 0 ] ;
     then
-        echo "File ${file} is not encrypted"
+        echo "File ${file} has kubernetes secret is not encrypted"
         was_no_encrypted=1
     fi
 done

@@ -9,7 +9,7 @@
   - path
   #files: *
 - id: kubernetes-secrets
-  name: plain secrets
+  name: kubernetes plain secrets
   description: Check that files in argument directory has non encrypted secrets
   require_serial: true
   entry: bin/kubernetes-secrets.sh
