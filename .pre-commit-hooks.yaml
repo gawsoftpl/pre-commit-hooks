@@ -8,6 +8,16 @@
   args:
   - path
   #files: *
+- id: age-secret-encrypted
+  name: file encrypted with age
+  description: Check that file in argument are encrypted with age
+  require_serial: true
+  entry: bin/age-secret-encrypted.sh
+  language: script
+  always_run: true
+  args:
+  - path
+  #files: *
 - id: kubernetes-secrets
   name: kubernetes plain secrets
   description: Check that files in argument directory has non encrypted secrets
