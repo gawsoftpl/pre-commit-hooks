@@ -5,8 +5,9 @@ for file in "${@}";
 do
     was_encrypted=`cat ${file} | grep 'kind: Secret'`
     was_encrypted2=`cat ${file} | grep 'kind: secret'`
+    was_sops=`cat ${file} | grep 'sops:'`
 
-    if [ ${#was_encrypted} -gt 0 ] || [ ${#was_encrypted2} -gt 0 ] ;
+    if [ ${#was_encrypted} -gt 0 ] || [ ${#was_encrypted2} -gt 0 && ${#was_sops} -eq 0 ] ;
     then
         echo "File ${file} has kubernetes secret is not encrypted"
         was_no_encrypted=1
