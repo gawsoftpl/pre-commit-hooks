@@ -2,14 +2,16 @@
 
 
 was_no_encrypted=0
-file=$1
 
-was_encrypted=`cat ${file} | grep 'BEGIN AGE ENCRYPTED FILE'`
-if [ ${#was_encrypted} -eq 0 ];
-then
-    echo "File ${file} is not encrypted"
-    was_no_encrypted=1
-fi
+for file in "${@}";
+do
+    was_encrypted=`cat ${file} | grep 'BEGIN AGE ENCRYPTED FILE'`
+    if [ ${#was_encrypted} -eq 0 ];
+    then
+        echo "File ${file} is not encrypted"
+        was_no_encrypted=1
+    fi
+done
 
 if [ $was_no_encrypted -gt 0 ];
 then
