@@ -8,6 +8,16 @@
   args:
   - path
   #files: *
+- id: age-secrets-encrypted-glob
+  name: files with glob pattern encrypted with age
+  description: Check that files in argument directory are encrypted with age
+  require_serial: true
+  entry: bin/age-secrets-encrypted-glob.sh
+  language: script
+  always_run: true
+  args:
+  - path
+  #files: *
 - id: age-secret-encrypted
   name: file encrypted with age
   description: Check that file in argument are encrypted with age
