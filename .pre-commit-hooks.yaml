@@ -28,6 +28,16 @@
   args:
   - path
   #files: *
+- id: sops-secret-encrypted
+  name: file encrypted with sops
+  description: Check that file in argument are encrypted with sops
+  require_serial: true
+  entry: bin/sops-secret-encrypted.sh
+  language: script
+  always_run: true
+  args:
+  - path
+  #files: *
 - id: kubernetes-secrets
   name: kubernetes plain secrets
   description: Check that files in argument directory has non encrypted secrets

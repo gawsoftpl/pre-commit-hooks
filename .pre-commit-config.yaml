@@ -6,3 +6,4 @@ repos:
   - id: age-secrets-encrypted-glob
   - id: age-secret-encrypted
   - id: kubernetes-secrets
+  - id: sops-secret-encrypted
